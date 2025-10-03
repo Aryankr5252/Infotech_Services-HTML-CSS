@@ -53,6 +53,10 @@ nav {
     box-shadow: 0px 0px 14px 2px rgba(250, 17, 56, 0.45);
 }
 
+#bar {
+    display: none;
+}
+
 /* Hero-section */
 
 .hero-section {
@@ -276,9 +280,13 @@ nav {
 }
 
 .first-section-text h4{
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
 
+}
+
+.first-section-text h4 span {
+    color: #fa1239;
 }
 
 .first-section-cards-container{
@@ -324,6 +332,92 @@ nav {
     font-weight: 500;
     line-height: 30px;
     color: #242424;
+}
+
+#bar {
+    font-size: 28px;
+    cursor: pointer;
+    display: none; 
+    margin-left: 20px;
+    color: #fa1239;
+}
+
+.off-canvas-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #FFE7EB; 
+    z-index: 1000;
+    padding: 30px 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.off-canvas-menu.active {
+    transform: translateX(0);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.menu-header img {
+    height: 40px;
+}
+
+#close-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fa1239;
+}
+
+.mobile-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.mobile-links li {
+    font-size: 18px;
+    font-weight: 500;
+    color: #282828;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    transition: color 0.2s;
+}
+
+.mobile-links li:first-child {
+    color: #fa1239; 
+}
+
+.mobile-links li i {
+    margin-right: 15px;
+    font-size: 20px;
+    width: 30px; 
+    text-align: center;
+}
+
+.menu-contact-button {
+    width: 100%;
+    padding: 14px 22px;
+    background-color: #fa1239;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 2px rgba(250, 17, 56, 0.45);
+    cursor: pointer;
 }
 
 /* Laptops L (Max Width: 1200px) */
@@ -456,23 +550,30 @@ nav {
     .nav-links {
         display: none; 
     }
+
+    .logo div img{
+        height: 50px;
+    }
     
     .quote-button {
-        width: 120px;
-        font-size: 16px;
-        padding: 18px 10px;
+        display: none;
+    }
+
+    #bar {
+        display: block;
+        
     }
 
     /* Hero Section */
     .hero-section {
         flex-direction: column; 
-        padding: 30px 20px;
+        padding: 30px 20px 0 20px;
         height: auto;
     }
 
     .hero-text-container {
         width: 100%; 
-        order: 2;
+        order: 1;
         padding-bottom: 50px;
     }
 
@@ -510,8 +611,8 @@ nav {
     .hero-image {
         width: 100%; 
         height: 450px;
-        order: 1; 
-        margin-bottom: 30px;
+        order: 2; 
+        /* margin-bottom: 30px; */
     }
 
     .outer-circle {
@@ -533,7 +634,7 @@ nav {
     }
 
     .hero-rating {
-        bottom: 50px;
+        bottom: 150px;
         left: 20px;
         padding: 10px;
         gap: 10px;
@@ -572,7 +673,7 @@ nav {
     }
 
     .first-section-text h4 {
-        font-size: 22px;
+        font-size: 30px;
         text-align: center;
     }
 
@@ -588,29 +689,38 @@ nav {
         padding: 0 10px;
     }
 
+    .logo div img{
+        height: 44px;
+    }
+
     /* Hero Section */
     .hero-section {
-        padding: 20px 10px;
+        padding: 20px 10px 0 10px;
     }
 
     .hero-text h1 {
-        font-size: 32px; 
+        font-size: 34px; 
     }
 
     .hero-text p {
         width: 100%;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .hero-buttons {
         flex-direction: column; 
+        align-items: center;
         gap: 15px;
         width: 80%;
     }
     
-    .hero-resume-button,
-    .hero-contact-button {
+    .hero-resume-button
+    {
         width: 100%;
+    }
+
+    .hero-contact-button {
+        width: 80%;
     }
 
     .hero-image {
@@ -629,7 +739,7 @@ nav {
 
     .hero-rating {
         left: 5px; 
-        bottom: 20px;
+        bottom: 120px;
     }
     
     .hero-resume-count {
@@ -658,7 +768,11 @@ nav {
     }
 
     .first-section-text h4 {
-        font-size: 18px; 
+        font-size: 30px; 
+    }
+
+    .first-section-cards-container{
+        padding: 0 16px;
     }
 
     .first-section-card {
@@ -679,11 +793,11 @@ nav {
 
 @media (max-width: 320px) {
     .hero-text h1 {
-        font-size: 28px; 
+        font-size: 34px; 
     }
 
     .hero-text p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .quote-button {

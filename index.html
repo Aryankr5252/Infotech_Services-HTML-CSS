@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav>
-            <div>
+            <div class="logo">
                 <div><img src="./assests/Group.png" alt=""></div>
                 
             </div>
@@ -27,9 +27,24 @@
             </div>
             <div>
                 <button class="quote-button">Get a Quote</button>
+                <i class="fa-solid fa-bars" id="bar"></i>
             </div>
         </nav>
     </header>
+    <div class="off-canvas-menu" id="mobile-menu">
+        <div class="menu-header">
+            <div><img src="./assests/Group.png" alt=""></div>
+            <i class="fa-solid fa-xmark" id="close-menu"></i>
+        </div>
+        <ul class="mobile-links">
+            <li><i class="fa-solid fa-house"></i> Home</li>
+            <li><i class="fa-solid fa-circle-info"></i> About Us</li>
+            <li><i class="fa-solid fa-briefcase"></i> Our Services</li>
+            <li><i class="fa-solid fa-tags"></i> Pricing</li>
+            <li><i class="fa-solid fa-circle-question"></i> FAQ</li>
+        </ul>
+        <button class="menu-contact-button">CONTACT US</button>
+    </div>
     <main>
         <section class="hero-section">
             <div class="hero-text-container">
@@ -76,7 +91,7 @@
         <section class="first-section">
             <div class="first-section-text">
                 <p>What You Get</p>
-                <h4>You’re not just another applicant and your resume shouldn’t look like one</h4>
+                <h4>You’re Not Just <span>Another Applicant</span> And Your Resume Shouldn’t Look Like One</h4>
             </div>
             <div class="first-section-cards-container">
                 <div class="first-section-card">
@@ -121,6 +136,8 @@
     <footer>
 
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
