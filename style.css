@@ -14,19 +14,21 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .links {
     list-style: none;
     display: flex;
-    gap: 4px;
+    gap: 24px;
     cursor: pointer;
 }
 
 .links li {
     padding: 10px;
     font-size: 18px;
+    font-weight: 500;
+    font-family: 'Avenir Gothic', sans-serif;
     color: #282828;
     border-bottom: 2px solid #fff;
 }
@@ -86,7 +88,7 @@ nav {
 .hero-text h1 {
     font-size: 64px;
     font-weight: bold;
-
+    line-height: 80px;
 }
 
 .hero-text h1 span {
@@ -103,13 +105,15 @@ nav {
 
 .hero-text p {
     font-size: 16px;
+    font-weight: 500;
     line-height: 34px;
     width: 485px;
+    text-transform: capitalize;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 10px;
+    gap: 24px;
 }
 
 .hero-resume-button {
@@ -118,6 +122,7 @@ nav {
     border: 1px solid #fa1239;
     font-size: 18px;
     border-radius: 30px;
+    font-weight: 500;
     box-shadow: 0px 0px 14px 2px rgba(250, 17, 56, 0.45);
 }
 
@@ -200,7 +205,7 @@ nav {
     border-radius: 10px;
     background-color: #fff;
     position: absolute;
-    bottom: 30%;
+    bottom: 29%;
     left: -20px;
 }
 
@@ -236,7 +241,7 @@ nav {
     gap: 20px;
     border-radius: 10px;
     position: absolute;
-    bottom: 60px;
+    bottom: 48px;
     right: 0;
     background-color: #fff;
 }
@@ -276,13 +281,14 @@ nav {
     font-size: 18px;
     font-weight: 600;
     border-radius: 6px;
-    background-color: #FD92A430;
+    background-color: rgb(255, 222, 227);
 }
 
 .first-section-text h4{
-    font-size: 30px;
+    font-size: 44px;
     font-weight: 600;
-
+    text-align: center;
+    padding: 0 30px;
 }
 
 .first-section-text h4 span {
@@ -312,26 +318,32 @@ nav {
 
 .first-section-card-image{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 278px;
+}
+
+.first-section-card-image h3{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .first-section-card-text{
-    
-}
-
-.first-section-card-text h3{
-    font-size: 20px;
-    font-weight: 500;
-
+    text-align: center;
 }
 
 .first-section-card-text p{
     margin-top: 24px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 30px;
-    color: #242424;
+    color: #595959;
 }
 
 #bar {
@@ -701,6 +713,8 @@ nav {
     /* Hero Section */
     .hero-section {
         padding: 20px 10px 0 10px;
+        background: linear-gradient(to right top, #ffe3e8, #ffe3e8);
+
     }
 
     .hero-text h1 {
@@ -713,22 +727,26 @@ nav {
         font-size: 16px;
         line-height: 34px;
         font-weight:400;
+        padding: 0 10px;
     }
 
     .hero-buttons {
         flex-direction: column; 
         align-items: center;
-        gap: 15px;
+        gap: 24px;
         width: 80%;
     }
     
     .hero-resume-button
     {
-        width: 100%;
+        width: 202px;
+        font-weight: 500;
     }
 
     .hero-contact-button {
-        width: 80%;
+        width: 157px;
+        font-size: 18px;
+        font-weight: 500;
     }
 
     .hero-image {
@@ -772,11 +790,14 @@ nav {
     
     /* First Section */
     .first-section {
-        padding: 40px 10px;
+        padding: 40px 16px;
     }
 
     .first-section-text h4 {
         font-size: 30px; 
+        line-height: 40px;
+        font-weight: 600;
+        padding: 0;
     }
 
     .first-section-cards-container{
